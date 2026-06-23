@@ -50,6 +50,7 @@ function createNav(active?: string): HTMLElement {
   const links = el('div', 'nav-links');
   const navItems = [
     { key: 'navWriting' as const, route: '#/writing' },
+    { key: 'navWeekly' as const, route: '#/weekly' },
   ];
   for (const item of navItems) {
     const a = el('a', active === item.route ? 'active' : undefined, t(item.key, currentLang));
@@ -182,7 +183,7 @@ function renderHome(): HTMLElement {
   // Hero
   const hero = el('div', 'hero');
   const avatar = el('img', 'hero-avatar');
-  avatar.src = '/avatar.jpg';
+  avatar.src = import.meta.env.BASE_URL + 'avatar.jpg';
   avatar.alt = t('siteName', currentLang);
   hero.appendChild(avatar);
   const tagline = el('h1', 'hero-tagline', t('siteName', currentLang));
@@ -192,7 +193,7 @@ function renderHome(): HTMLElement {
   content.appendChild(hero);
 
   // Theme blocks
-  const sectionKeys: SectionKey[] = ['arch-ai', 'reading', 'road', 'invest'];
+  const sectionKeys: SectionKey[] = ['arch-ai', 'reading', 'road', 'invest', 'weekly'];
   for (const key of sectionKeys) {
     content.appendChild(el('hr', 'divider'));
     content.appendChild(createThemeBlock(key));
@@ -370,11 +371,39 @@ function renderArticle(articleId: string): HTMLElement {
   return main;
 }
 
+
+// --- Weekly page ---
+
+function renderWeekly(): HTMLElement {
+  const main = el('div');
+  main.appendChild(createNav('#/weekly'));
+
+  const content = el('main', 'site-main page-enter');
+  content.appendChild(createBackLink(t('backHome', currentLang), '#/'));
+  const h1 = el('h1', 'page-title', t('navWeekly', currentLang));
+  const desc = el('p', 'page-desc', '一周值得关注的动态、思考与发现');
+  content.appendChild(h1);
+  content.appendChild(desc);
+  content.appendChild(el('hr', 'divider'));
+
+  const weeklyArticles = articlesBySection('weekly');
+  if (weeklyArticles.length > 0) {
+    content.appendChild(createArticleList(weeklyArticles));
+  } else {
+    content.appendChild(el('div', 'article-empty', t('articleEmpty', currentLang)));
+  }
+
+  main.appendChild(content);
+  main.appendChild(createFooter());
+  return main;
+}
+
 // --- Router ---
 
 const routes: Record<string, PageRenderer> = {
   '/': renderHome,
   '/writing': renderWriting,
+  '/weekly': renderWeekly,
 };
 
 function getRoute(): string {

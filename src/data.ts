@@ -1,4 +1,4 @@
-export type SectionKey = 'arch-ai' | 'reading' | 'road' | 'invest';
+export type SectionKey = 'arch-ai' | 'reading' | 'road' | 'invest' | 'weekly';
 
 export interface Article {
   id: string;
@@ -304,6 +304,17 @@ export const sections: Record<SectionKey, Section> = {
       desc: 'Value investing study, portfolio tracking, and company analysis',
     },
   },
+  'weekly': {
+    key: 'weekly',
+    name: '周刊',
+    subtitle: '每周精选',
+    desc: '一周值得关注的动态、思考与发现',
+    en: {
+      name: 'Weekly',
+      subtitle: 'Weekly Picks',
+      desc: 'Noteworthy updates, reflections, and discoveries each week',
+    },
+  },
 };
 
 export function articlesBySection(key: SectionKey): Article[] {
@@ -329,6 +340,7 @@ export const i18n: Record<string, Record<Lang, string>> = {
   siteName: { zh: '小木木', en: 'Xiaomu' },
   siteSub: { zh: '夏之舞者', en: 'Summer Dancer' },
   navWriting: { zh: '写作', en: 'Writing' },
+  navWeekly: { zh: '周刊', en: 'Weekly' },
   recent: { zh: '最近更新', en: 'Recent Updates' },
   writingTitle: { zh: '写作', en: 'Writing' },
   writingDesc: { zh: '随手写，不限主题。读书笔记、概念拆解、生活观察，都是写作的一部分。', en: 'Free-form writing on any topic. Reading notes, concept breakdowns, life observations — all part of the practice.' },
