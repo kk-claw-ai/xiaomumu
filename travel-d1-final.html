@@ -372,7 +372,7 @@ body {
 (function() {
   if (sessionStorage.getItem('travel_auth') === '2026') {
     document.getElementById('pwd-overlay').remove();
-    document.querySelector('.page').style.display = '';
+    document.querySelector('.page').style.display = 'block';
     return;
   }
   function checkPwd() {
@@ -380,7 +380,7 @@ body {
     if (input === '2026') {
       sessionStorage.setItem('travel_auth', '2026');
       document.getElementById('pwd-overlay').remove();
-      document.querySelector('.page').style.display = '';
+      document.querySelector('.page').style.display = 'block';
     } else {
       document.getElementById('pwd-error').style.display = 'block';
       document.getElementById('pwd-input').value = '';
