@@ -312,7 +312,7 @@ body {
 </head>
 <body>
 <style>
-  body { display: none !important; }
+  .page { display: none; }
   #pwd-overlay {
     display: flex;
     flex-direction: column;
@@ -370,7 +370,7 @@ body {
 (function() {
   if (sessionStorage.getItem('travel_auth') === '2026') {
     document.getElementById('pwd-overlay').remove();
-    document.body.style.display = '';
+    document.querySelector('.page').style.display = '';
     return;
   }
   function checkPwd() {
@@ -378,7 +378,7 @@ body {
     if (input === '2026') {
       sessionStorage.setItem('travel_auth', '2026');
       document.getElementById('pwd-overlay').remove();
-      document.body.style.display = '';
+      document.querySelector('.page').style.display = '';
     } else {
       document.getElementById('pwd-error').style.display = 'block';
       document.getElementById('pwd-input').value = '';
