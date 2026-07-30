@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>海昏侯与滕王阁</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'PingFang SC','Microsoft YaHei','Heiti SC',sans-serif; background:#f5f2ec; color:#3a3631; line-height:1.85; }
+
+.article { max-width:680px; margin:0 auto; padding:40px 24px 60px; }
+
+/* 封面 */
+.cover { position:relative; margin:0 -24px 40px; height:420px; overflow:hidden; }
+.cover img { width:100%; height:100%; object-fit:cover; filter:brightness(0.78) saturate(0.88); }
+.cover::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom,rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.65) 100%); }
+.cover-text { position:absolute; bottom:40px; left:30px; right:30px; color:#f5f2ec; z-index:2; }
+.cover-title { font-family:'Songti SC','SimSun','STSong',serif; font-size:38px; font-weight:600; letter-spacing:3px; line-height:1.2; margin-bottom:8px; }
+.cover-sub { font-size:13px; opacity:0.82; font-weight:300; letter-spacing:1.5px; line-height:1.6; }
+.cover-meta { position:absolute; top:28px; right:28px; text-align:right; color:#f5f2ec; z-index:2; font-size:11px; letter-spacing:1px; opacity:0.7; line-height:2; }
+
+/* 正文 */
+.lead { font-family:'Songti SC','SimSun','STSong',serif; font-size:17px; line-height:2; color:#4a4540; margin-bottom:36px; font-weight:400; border-left:2px solid #c4b8a4; padding-left:18px; }
+
+h2 { font-family:'Songti SC','SimSun','STSong',serif; font-size:21px; font-weight:600; color:#3a3631; margin:44px 0 16px; letter-spacing:1.5px; }
+h2::before { content:''; display:inline-block; width:18px; height:2px; background:#c4b8a4; margin-right:10px; vertical-align:middle; }
+
+p { font-size:15px; line-height:2; color:#4a4540; margin-bottom:16px; text-align:justify; }
+
+/* 图片 */
+.photo { margin:28px 0; }
+.photo img { width:100%; height:auto; border-radius:2px; display:block; }
+.photo-pair { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:28px 0; }
+.photo-pair img { width:100%; height:auto; border-radius:2px; display:block; }
+.photo-tall { margin:28px 0; text-align:center; }
+.photo-tall img { max-width:70%; height:auto; border-radius:2px; display:block; margin:0 auto; }
+.caption { font-size:11px; color:#998f82; margin-top:6px; letter-spacing:0.5px; text-align:center; line-height:1.6; }
+
+/* 引言 */
+.quote { font-family:'Songti SC','SimSun','STSong',serif; font-size:20px; font-weight:300; color:#6a6560; text-align:center; padding:28px 36px; margin:36px 0; position:relative; line-height:1.7; }
+.quote::before,.quote::after { content:'"'; font-size:36px; color:#c4b8a4; position:absolute; opacity:0.4; }
+.quote::before { top:8px; left:16px; }
+.quote::after { bottom:-8px; right:16px; }
+
+/* 信息卡 */
+.info-card { background:#ebe6dd; border-radius:3px; padding:20px 24px; margin:28px 0; }
+.info-card-title { font-family:'Songti SC','SimSun','STSong',serif; font-size:14px; font-weight:600; color:#3a3631; margin-bottom:8px; letter-spacing:1px; }
+.info-row { display:flex; gap:10px; padding:4px 0; font-size:12px; }
+.info-row .label { color:#998f82; min-width:70px; }
+.info-row .value { color:#4a4540; }
+
+/* 尾注 */
+.ending { text-align:center; margin-top:50px; padding-top:24px; border-top:1px solid #e0dbd1; }
+.ending-text { font-family:'Songti SC','SimSun','STSong',serif; font-size:14px; color:#998f82; letter-spacing:2px; }
+
+@media (max-width:600px) {
+  .article { padding:30px 18px 50px; }
+  .cover { height:340px; margin:0 -18px 30px; }
+  .cover-title { font-size:30px; }
+  .photo-pair { grid-template-columns:1fr; }
+  .photo-tall img { max-width:88%; }
+  .lead { font-size:16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="article">
+
+  <!-- 封面 -->
+  <div class="cover">
+    <img src="assets/d4/image20.jpeg" alt="赣江">
+    <div class="cover-meta">南昌 · 24~31℃<br>阵雨转阴</div>
+    <div class="cover-text">
+      <div class="cover-title">海昏侯<br>与滕王阁</div>
+      <div class="cover-sub">汉代王陵的黄金、八大山人的孤傲，<br>以及赣江入夜的灯火</div>
+    </div>
+  </div>
+
+  <!-- 导语 -->
+  <div class="lead">雨停了，南昌的湿热不弱于江南。但当海昏侯公园出现在眼前时——浓浓的汉代风，巨大，开阔，拙朴。从两千年前的黄金王陵，到八大山人的幽静园林，再到入夜后赣江对岸滕王阁亮起的灯火，一整天穿越了三个时空。</div>
+
+  <!-- 一、海昏侯 -->
+  <h2>海昏侯国遗址公园</h2>
+  <p>2015年中国十大考古发现之一。海昏侯刘贺，汉武帝之孙，当了27天皇帝被废。墓中出土黄金478件、铜钱200万枚（10吨），震惊考古界。一个被历史轻描淡写的废帝，地下却埋着一个王国的财富。</p>
+
+  <div class="photo"><img src="assets/d4/image1.jpeg" alt="海昏侯国遗址公园"><div class="caption">南昌汉代海昏侯国国家考古遗址公园入口</div></div>
+
+  <div class="photo-tall"><img src="assets/d4/image2.jpeg" alt="西汉遗韵"><div class="caption">"西汉遗韵"主题雕塑</div></div>
+
+  <p>公园巨大，开阔，拙朴。汉文明的古风还在——马车的雕塑从广场上奔来，金色的马、金色的轮，两千年的时间在这里凝固成了造型。</p>
+
+  <div class="photo-pair">
+    <div><img src="assets/d4/image3.jpeg" alt="金色马车"><div class="caption">汉代马车滚滚而来</div></div>
+    <div><img src="assets/d4/image4.jpeg" alt="游客中心"><div class="caption">弧形游客中心</div></div>
+  </div>
+
+  <div class="photo"><img src="assets/d4/image5.jpeg" alt="小猪雕塑"><div class="caption">博物馆门口的小猪雕塑，憨态可掬</div></div>
+
+  <div class="info-card">
+    <div class="info-card-title">实用信息</div>
+    <div class="info-row"><span class="label">门票</span><span class="value">60元（65岁以上免票）</span></div>
+    <div class="info-row"><span class="label">观光车</span><span class="value">15元</span></div>
+    <div class="info-row"><span class="label">建议游览</span><span class="value">3~4小时</span></div>
+    <div class="info-row"><span class="label">交通</span><span class="value">距南昌市区约45分钟车程</span></div>
+  </div>
+
+  <div class="quote">汉文明的古风还在</div>
+
+  <!-- 二、中午 -->
+  <h2>中午补给</h2>
+  <p>误入南京鸭血店，来份鸭血粉丝汤。</p>
+
+  <div class="photo-pair">
+    <div><img src="assets/d4/image6.jpeg" alt="鸭血粉丝汤"><div class="caption">鸭血粉丝汤</div></div>
+    <div><img src="assets/d4/image7.jpeg" alt="青花瓷碗"><div class="caption">六朝门青花瓷碗</div></div>
+  </div>
+
+  <div class="photo-tall"><img src="assets/d4/image8.jpeg" alt="桂花凉豆腐"><div class="caption">桂花凉豆腐</div></div>
+
+  <!-- 三、八大山人 -->
+  <h2>八大山人纪念馆</h2>
+  <p>从海昏侯的汉代金光里出来，下午拐进了青云谱梅湖畔的八大山人纪念馆。明末清初画家朱耷——八大山人——隐居作画之地。</p>
+  <p>走岔了路，反而走进了更深处。园林幽静，古木参天，和上午的帝王气象完全是两个世界。朱耷是明朝宗室后裔，国破之后出家为僧，以画寄意。他的鱼鸟翻着白眼，他的山水空寂无人——一个亡国贵族的骄傲与孤独，都藏在这些笔墨里。</p>
+
+  <div class="photo"><img src="assets/d4/image9.jpeg" alt="淨明真境"><div class="caption">"淨明真境"——八大山人纪念馆门楼</div></div>
+
+  <div class="photo-pair">
+    <div><img src="assets/d4/image10.jpeg" alt="荷花池"><div class="caption">庭院荷花池</div></div>
+    <div><img src="assets/d4/image11.jpeg" alt="睡莲"><div class="caption">睡莲特写</div></div>
+  </div>
+
+  <div class="photo-pair">
+    <div><img src="assets/d4/image12.jpeg" alt="高山仰止"><div class="caption">高山仰止</div></div>
+    <div><img src="assets/d4/image14.jpeg" alt="古树老宅"><div class="caption">古树环绕老宅</div></div>
+  </div>
+
+  <div class="photo-pair">
+    <div><img src="assets/d4/image15.jpeg" alt="生平展板"><div class="caption">八大山人生平展板</div></div>
+    <div><img src="assets/d4/image17.jpeg" alt="五桂合株"><div class="caption">五桂合株景观石</div></div>
+  </div>
+
+  <div class="photo"><img src="assets/d4/image16.jpeg" alt="铜像"><div class="caption">八大山人铜像</div></div>
+
+  <div class="photo"><img src="assets/d4/image18.jpeg" alt="水禽"><div class="caption">水禽雁类</div></div>
+
+  <div class="photo-tall"><img src="assets/d4/image19.jpeg" alt="赣江边的鹅"><div class="caption">水岸边，两只鹅</div></div>
+
+  <!-- 四、赣江·滕王阁 -->
+  <h2>赣江·滕王阁</h2>
+  <p>傍晚回到酒店客房，一方面是疲了，另一方面是为了不错过秋水广场的喷泉表演——再者，这间客房正对着滕王阁，看它点灯亮起也是绝妙的感受。</p>
+
+  <div class="photo"><img src="assets/d4/image20.jpeg" alt="赣江"><div class="caption">傍晚的赣江，云涌水静</div></div>
+
+  <div class="photo-tall"><img src="assets/d4/image21.jpeg" alt="滕王阁"><div class="caption">滕王阁日景——绿瓦红身，静立江畔</div></div>
+
+  <p>赣江的江面镜似的平，天空云涌卷起，自然的隽永大气。对面的滕王阁静静伫立，拉近镜头，它的英姿飒爽让人久久不愿移开视线。王勃写"落霞与孤鹜齐飞，秋水共长天一色"时，看到的大概就是这样的江面。</p>
+
+  <div class="photo"><img src="assets/d4/image23.jpeg" alt="夜景"><div class="caption">入夜后的赣江——大桥、喷泉、灯火</div></div>
+
+  <div class="quote">一方水土养一方人<br>行万里路才能体会人世间，自然，宇宙</div>
+
+  <!-- 五、晚餐 -->
+  <h2>春字号晚餐</h2>
+  <p>看完喷泉表演已是八点多了，再次来到春字号，爆炒的烟火气，挺香。</p>
+
+  <div class="photo-tall"><img src="assets/d4/image29.jpeg" alt="爆炒"><div class="caption">春字号爆炒</div></div>
+
+  <div class="photo-pair">
+    <div><img src="assets/d4/image30.jpeg" alt="豆芽炒鸡蛋"><div class="caption">豆芽炒鸡蛋</div></div>
+    <div><img src="assets/d4/image31.jpeg" alt="广式炒饭"><div class="caption">广式炒饭</div></div>
+  </div>
+
+  <!-- 六、酒店 -->
+  <h2>入住的酒店</h2>
+  <div class="photo"><img src="assets/d4/image32.jpeg" alt="酒店外景"><div class="caption">酒店外观</div></div>
+  <div class="photo-tall"><img src="assets/d4/image35.jpeg" alt="滕王阁纸雕"><div class="caption">滕王阁纸雕灯</div></div>
+
+  <!-- 尾 -->
+  <div class="ending">
+    <div class="ending-text">夏日避暑旅行 · 南昌</div>
+  </div>
+
+</div>
+
+</body>
+</html>
