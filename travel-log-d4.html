@@ -287,6 +287,47 @@ body {
   .pull-quote { font-size: 18px; padding: 20px; }
 }
 </style>
+<script>
+(function() {
+  function init() {
+    if (sessionStorage.getItem('travel_auth') === '2026') {
+      var overlay = document.getElementById('pwd-overlay');
+      if (overlay) overlay.remove();
+      var page = document.querySelector('.page');
+      if (page) page.style.display = 'block';
+      return;
+    }
+    var btn = document.getElementById('pwd-btn');
+    var input = document.getElementById('pwd-input');
+    if (!btn || !input) {
+      setTimeout(init, 50);
+      return;
+    }
+    function checkPwd() {
+      var val = input.value;
+      if (val === '2026') {
+        sessionStorage.setItem('travel_auth', '2026');
+        var ov = document.getElementById('pwd-overlay');
+        if (ov) ov.remove();
+        var pg = document.querySelector('.page');
+        if (pg) pg.style.display = 'block';
+      } else {
+        document.getElementById('pwd-error').style.display = 'block';
+        input.value = '';
+      }
+    }
+    btn.addEventListener('click', checkPwd);
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') checkPwd();
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
 </head>
 <body>
 
@@ -478,30 +519,7 @@ body {
 
 </div>
 
-<script>
-(function() {
-  if (sessionStorage.getItem('travel_auth') === '2026') {
-    document.getElementById('pwd-overlay').remove();
-    document.querySelector('.page').style.display = 'block';
-    return;
-  }
-  function checkPwd() {
-    var input = document.getElementById('pwd-input').value;
-    if (input === '2026') {
-      sessionStorage.setItem('travel_auth', '2026');
-      document.getElementById('pwd-overlay').remove();
-      document.querySelector('.page').style.display = 'block';
-    } else {
-      document.getElementById('pwd-error').style.display = 'block';
-      document.getElementById('pwd-input').value = '';
-    }
-  }
-  document.getElementById('pwd-btn').addEventListener('click', checkPwd);
-  document.getElementById('pwd-input').addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') checkPwd();
-  });
-})();
-</script>
+
 
 </body>
 </html>
