@@ -18,11 +18,11 @@
   .full-img { margin:0 -24px 12px; }
   .full-img img { width:100%; display:block; }
   .caption { text-align:center; font-size:13px; color:#9a8e7e; margin:12px 24px 28px; font-style:italic; }
-  .video-placeholder { position:relative; margin:0 -24px 12px; cursor:pointer; }
-  .video-placeholder img { width:100%; display:block; }
+  video { width:100%; display:block; border-radius:3px; }
+  .video-block { margin:0 -24px 12px; }
+  .video-block video { width:100%; display:block; }
   .video-row { display:flex; gap:8px; margin:0 -24px 12px; }
-  .video-row .video-placeholder { margin:0; flex:1; }
-  .video-row .video-placeholder img { width:100%; }
+  .video-row video { flex:1; width:50%; }
   .ornament-line { display:inline-block; width:40px; height:1px; background:#b8a88a; }
 </style>
 </head>
@@ -105,21 +105,23 @@
   </section>
 
   <!-- 夜色视频1（全宽竖版） -->
-  <div class="video-placeholder">
-    <img src="https://kk-claw-ai.github.io/xiaomumu/publish/night-video1-poster.jpg" alt="夜色如琴湖视频">
+  <div class="video-block">
+    <video controls preload="metadata" playsinline poster="https://kk-claw-ai.github.io/xiaomumu/publish/night-video1-poster.jpg">
+      <source src="https://kk-claw-ai.github.io/xiaomumu/d6-v5-ruqin-night.mp4" type="video/mp4">
+    </video>
   </div>
-  <p class="caption">夜色中的如琴湖 ▶ 公众号后台替换为视频</p>
+  <p class="caption">夜色中的如琴湖</p>
 
   <!-- 夜色视频2+3（并排竖版） -->
   <div class="video-row">
-    <div class="video-placeholder">
-      <img src="https://kk-claw-ai.github.io/xiaomumu/publish/night-video2-poster.jpg" alt="湖边夜色视频">
-    </div>
-    <div class="video-placeholder">
-      <img src="https://kk-claw-ai.github.io/xiaomumu/publish/night-video3-poster.jpg" alt="湖边夜色视频">
-    </div>
+    <video controls preload="metadata" playsinline poster="https://kk-claw-ai.github.io/xiaomumu/publish/night-video2-poster.jpg">
+      <source src="https://kk-claw-ai.github.io/xiaomumu/d6-v3-ruqin-night.mp4" type="video/mp4">
+    </video>
+    <video controls preload="metadata" playsinline poster="https://kk-claw-ai.github.io/xiaomumu/publish/night-video3-poster.jpg">
+      <source src="https://kk-claw-ai.github.io/xiaomumu/d6-v4-ruqin-night.mp4" type="video/mp4">
+    </video>
   </div>
-  <p class="caption">湖边夜色 ▶ 公众号后台替换为视频</p>
+  <p class="caption">湖边夜色</p>
 
   <!-- 夜色照片 -->
   <div class="full-img">
@@ -154,14 +156,14 @@
 
   <!-- 美庐视频2段并排 -->
   <div class="video-row">
-    <div class="video-placeholder">
-      <img src="https://kk-claw-ai.github.io/xiaomumu/publish/meilu-video1-poster.jpg" alt="美庐别墅视频">
-    </div>
-    <div class="video-placeholder">
-      <img src="https://kk-claw-ai.github.io/xiaomumu/publish/meilu-video2-poster.jpg" alt="美庐别墅视频">
-    </div>
+    <video controls preload="metadata" playsinline poster="https://kk-claw-ai.github.io/xiaomumu/publish/meilu-video1-poster.jpg">
+      <source src="https://kk-claw-ai.github.io/xiaomumu/d6-v1-meilu.mp4" type="video/mp4">
+    </video>
+    <video controls preload="metadata" playsinline poster="https://kk-claw-ai.github.io/xiaomumu/publish/meilu-video2-poster.jpg">
+      <source src="https://kk-claw-ai.github.io/xiaomumu/d6-v2-meilu.mp4" type="video/mp4">
+    </video>
   </div>
-  <p class="caption">美庐别墅 ▶ 公众号后台替换为视频</p>
+  <p class="caption">美庐别墅</p>
 
   <!-- 收尾 -->
   <section style="text-align:center;padding:40px 8px 20px;">
