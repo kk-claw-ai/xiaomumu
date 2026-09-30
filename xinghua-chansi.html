@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三砖殿覆三丈佛 · 徐州兴化禅寺纪行</title>
+<style>
+:root{
+  --ink:#1a1a1a;
+  --paper:#fbf8f1;
+  --rule:#2b2b2b;
+  --muted:#6b675f;
+  --accent:#8a2b22;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;
+  font-size:18px;
+  line-height:1.9;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:760px;margin:0 auto;padding:0 32px;}
+
+/* ---- top bar ---- */
+.topbar{
+  border-bottom:1px solid var(--rule);
+  padding:14px 0;
+  font-family:Georgia,"Times New Roman",serif;
+}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:baseline;}
+.topbar .name{font-size:22px;font-weight:bold;letter-spacing:.12em;}
+.topbar .name span{color:var(--accent);}
+.topbar .date{font-size:12px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase;}
+
+/* ---- masthead ---- */
+header.masthead{padding:64px 0 40px;border-bottom:1px solid var(--rule);text-align:center;}
+.kicker{
+  font-family:Arial,"Helvetica Neue",sans-serif;
+  font-size:12px;letter-spacing:.32em;color:var(--accent);
+  text-transform:uppercase;margin-bottom:26px;
+}
+h1.title{
+  font-size:52px;line-height:1.35;font-weight:700;
+  letter-spacing:.02em;margin-bottom:22px;
+}
+.dek{
+  font-size:19px;color:#3a3733;line-height:1.85;
+  max-width:560px;margin:0 auto 28px;
+}
+.byline{
+  font-family:Arial,sans-serif;font-size:12px;letter-spacing:.2em;color:var(--muted);
+}
+.byline b{color:var(--ink);font-weight:600;}
+
+/* ---- hero ---- */
+.hero{margin:48px 0 8px;}
+.hero img{width:100%;display:block;}
+.cap{
+  font-family:Arial,sans-serif;font-size:12.5px;color:var(--muted);
+  line-height:1.7;padding:10px 0 0;text-align:left;
+}
+
+/* ---- body ---- */
+article{padding:44px 0 20px;}
+article p{margin-bottom:26px;text-align:justify;}
+article p.lead::first-letter{
+  font-size:64px;float:left;line-height:.9;
+  padding:6px 12px 0 0;font-weight:700;color:var(--accent);
+}
+article h2{
+  font-size:27px;font-weight:700;margin:52px 0 22px;
+  letter-spacing:.01em;line-height:1.5;
+}
+.pull{
+  border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);
+  font-size:25px;line-height:1.7;font-weight:700;
+  padding:26px 8px;margin:40px 0;text-align:center;letter-spacing:.02em;
+}
+figure.inline{margin:40px 0;}
+figure.inline img{width:100%;display:block;}
+figure.inline figcaption{
+  font-family:Arial,sans-serif;font-size:12.5px;color:var(--muted);
+  padding-top:10px;line-height:1.7;
+}
+/* two-image row */
+.duo{display:flex;gap:16px;margin:40px 0;}
+.duo figure{flex:1;margin:0;}
+.duo img{width:100%;display:block;}
+.duo figcaption{
+  font-family:Arial,sans-serif;font-size:12px;color:var(--muted);
+  padding-top:8px;line-height:1.65;
+}
+.smallcap{font-variant:small-caps;letter-spacing:.08em;}
+
+/* ---- colophon ---- */
+.colophon{
+  margin-top:56px;padding:30px 0 70px;border-top:1px solid var(--rule);
+  font-family:Arial,sans-serif;font-size:12.5px;color:var(--muted);line-height:1.9;
+}
+.colophon b{color:var(--ink);}
+@media (max-width:600px){
+  h1.title{font-size:34px;}
+  .wrap{padding:0 20px;}
+  body{font-size:17px;}
+  .duo{flex-direction:column;}
+}
+
+.page { display: none; }
+#pwd-overlay { display: flex; position: fixed; top:0; left:0; width:100%; height:100%; background:#FBF3E7; align-items:center; justify-content:center; z-index:9999; }
+#pwd-box { text-align:center; padding:40px; }
+#pwd-input { padding:10px 16px; border:1px solid #c4b8a4; border-radius:4px; font-size:16px; width:200px; }
+#pwd-btn { margin-top:16px; padding:10px 24px; background:#9c3a2e; color:#fff; border:none; border-radius:4px; cursor:pointer; font-size:14px; }
+</style>
+</head>
+<body>
+<div id="pwd-overlay">
+  <div id="pwd-box">
+    <p style="color:#3a3631;margin-bottom:16px;">请输入访问密码</p>
+    <input type="password" id="pwd-input" placeholder="密码">
+    <br>
+    <button id="pwd-btn" onclick="checkPwd()">进入</button>
+  </div>
+</div>
+<div class="page">
+
+
+<div class="topbar"><div class="wrap">
+  <div class="name">旅 读 <span>·</span> THE TRAVEL READER</div>
+  <div class="date">September 2026</div>
+</div></div>
+
+<header class="masthead"><div class="wrap">
+  <div class="kicker">A Letter from Xuzhou · 城 市 来 信</div>
+  <h1 class="title">三砖殿覆三丈佛</h1>
+  <p class="dek">一路殿宇都平常，和别处见过的佛寺没什么两样，你以为已经走到头了；转过最后一道弯，贴着悬崖，一尊十一米半高的大佛就坐在眼前。</p>
+  <div class="byline">文字与摄影 · <b>本刊记者</b> 　 江苏 · 徐州　 2026年9月</div>
+</div></header>
+
+<div class="wrap">
+
+<figure class="hero">
+  <img src="assets/xinghua/photo4.jpg" alt="云龙山牌坊">
+  <div class="cap">登山的起点。一座乌褐色石牌坊兀立于林梢之间，匾额金字「云龙山」，斗拱层叠如墨。穿过牌坊，石阶向浓绿深处抬升，寺藏在看不见的地方。</div>
+</figure>
+
+<article>
+
+<p class="lead">刚进山门时，我以为这不过是一座年代久些的寺庙。</p>
+
+<p>九月的徐州，云龙山。沿东麓拾级而上，城市的喧声在身后一层层褪去，取而代之的是松针落地的细响、檐角铁马偶尔的一声，以及不知从哪座殿里飘来的、极淡的檀烟。兴化寺的山门是近年扩建的，黄墙笔直，院落规整，香炉、楹联、告示牌各在各位——和别处见过的寺庙，并没有什么两样。</p>
+
+<figure class="inline">
+  <img src="assets/xinghua/photo6.jpg" alt="兴化禅寺山门黄墙">
+  <figcaption>兴化禅寺山门。明黄墙壁、汉白玉栏杆，檐下横匾「兴化禅寺」，石阶正面另嵌一匾，篆书「南无阿弥陀佛」。今人扩建后的山门，气象开阔，如今已是苏北一带规模最大的寺庙。</figcaption>
+</figure>
+
+<p>于是一路往上走。穿过一进院落，是另一进；拜过一座殿，石阶又从殿侧抬起来。每次以为"这该到顶了吧"，转过弯去，后面还有路。山其实只有一百四十二米，山分九节，蜿蜒如龙，它的名字就是这么来的——可此刻它像憋着一句话，迟迟不肯说完。</p>
+
+<figure class="inline">
+  <img src="assets/xinghua/photo5.jpg" alt="云龙山石刻">
+  <div style="font-family:Arial,sans-serif;font-size:12.5px;color:var(--muted);line-height:1.7;padding-top:10px;">
+    路旁巨石上刻着这座山的小传，也刻着它被列入国家历史文化名山的缘由——「因有北魏大石佛」。绿蔓与蓝紫色小花从石顶垂落。走到这里，我还没有见到那尊佛。
+  </div>
+</figure>
+
+<p>最后一次，石阶尽头是一座看上去并不张扬的殿。迈进去，脚步先停住了，头才慢慢抬起来——一整面悬崖上，坐着一尊十一米半高的大佛。</p>
+
+<p>那种感觉很难用别的词形容，只能说是<b>震撼</b>。前面一路的平常，到这里全有了道理：佛太大，殿罩不住，只好把它留在最后；又或者说，整座寺的一进一进、一阶一阶，都是为了把人慢慢领到它跟前。佛低眉垂目，身上金箔在暗处发亮，而它身后不是墙，是一整块裸露的红砂岩崖——佛不是搬进殿里的，它就是这座山的一部分。</p>
+
+<figure class="inline">
+  <img src="assets/xinghua/photo9.jpg" alt="殿内贴金大石佛">
+  <figcaption>大佛殿内。贴金大石佛低眉而坐，供案上花果并陈，黑漆楹联自上而下。佛身之后是裸露的红砂岩崖——殿是罩在崖外的一只匣。</figcaption>
+</figure>
+
+<p>震撼过后，回过神来，才注意到这殿本身的怪：佛高十一米五二，合三丈四尺有余，前殿壁高三丈有余；可大殿后墙贴着山崖，只砌了三行砖，高不过尺许。一道墙矮得近乎敷衍，却罩住了这么大的一尊佛。这就是徐州人念了几百年的那句老话——<span class="smallcap">三砖殿覆三丈佛</span>。</p>
+
+<h2>一刀一剑凿出来的佛</h2>
+
+<p>殿旁的展板讲了这尊佛的来历，听上去几乎不可思议：据《徐州志》记载，北魏拓跋焘南下侵宋，路经彭城，是军中士卒拿着兵器，依着山崖，一刀一剑凿出了这尊佛——最初只凿成一个佛头，方面大耳，当地人叫它「佛头岩」。后世考证把年代定在北魏太和九年至十年间，即公元四八五至四八六年，主持者为彭城王元勰。</p>
+
+<figure class="inline">
+  <img src="assets/xinghua/photo10.jpg" alt="大石佛佛面旧照">
+  <figcaption>寺内展板上的旧影：贴金之前，石佛的脸。方面大耳，眉目低垂，崖壁的纹路从两颊一直延伸进背景——佛与山，原本就是同一块石头。</figcaption>
+</figure>
+
+<p>你很难想象那是怎样一件事。十一米半高的佛，不是机械、不是流水线，是一群正在行军打仗的士兵，拿着随身的刀剑，在悬崖上一下一下敲出来的。打仗的人为什么要做这个？赶路上战场的人，为什么肯把力气花在一块凿成佛形的石头上？</p>
+
+<p>今天我们站在佛前，那层光环其实早就散了。科学、史料、门口的说明牌，很容易把佛还原成一块石头、一件文物；如今来拜的人，多半也是借这炷香安一安自己的心。读历史书更容易有这个毛病——我们站在后视镜里，居高临下，觉得古人蒙昧，没有知识，什么都怕，什么都信。</p>
+
+<p>可真站到这面崖下，十一米的佛低眉看着你，你会明白"蒙昧"两个字打发不掉这件事。一千五百年前，是一个具体的人，手心磨出血，在崖上敲了整整两年（一说更早）；他敲下去的每一下都是真的，恐惧是真的，托付也是真的。那种气势兜头压下来的瞬间，你会想拜一拜——不为信什么，只是想沉一沉自己。这大概就是走到现场，和坐在书里评判，最大的不同。</p>
+
+<p>唐时，大佛两旁的崖壁上又添了约千尊小佛；明洪武三十一年，一位名叫胜吉的高僧，顺着山崖的地势、以石佛为中心盖起了殿宇。此后殿子或被岁月压塌，或毁于兵火，坏了又修、修了又坏，靠着山崖盖房这个格局始终没变，今天的框架出自明万历二十三年。毛泽东曾七次登临云龙山；二〇〇八年，佛像又历两月重新贴金，佛臂与胸前十七条雕龙按清康熙年间原色绘回。金箔一新，崖壁依旧。</p>
+
+<h2>莫向外求</h2>
+
+<p>沿寺院的高处环行，黄墙在树荫里时断时续。一方黑底金字的匾额挂在彩绘梁枋之下，四个字写得毫不客气：<b>莫向外求</b>。落款「甲辰秋月」。禅门的老话了——佛不在别处，不在他人口中，不在山外的城里；可把它挂在香火最盛的路口，总像一句专门说给赶路者听的提醒。</p>
+
+<div class="duo">
+  <figure>
+    <img src="assets/xinghua/photo7.jpg" alt="莫向外求匾额">
+    <figcaption>「莫向外求」匾额。黑底金字，上方是青绿描金的斗拱彩画。</figcaption>
+  </figure>
+  <figure>
+    <img src="assets/xinghua/photo8.jpg" alt="兴化禅寺龙纹金匾">
+    <figcaption>山门上的龙纹金匾，「兴化禅寺」四字为范光所题，匾框九龙盘绕。</figcaption>
+  </figure>
+</div>
+
+<p>殿前的小沙弥倒是把这四个字活成了样子。灰石雕的，光头，合掌，眉眼弯成两道月牙，身后的红墙漆皮斑驳。它就那样日日坐在墙根，谁来都笑，谁走也不挽留。石阶旁还有一座石灯笼，灯身六面镂空，旁边再立一尊小沙弥，挂着念珠，似睡似醒。</p>
+
+<div class="duo">
+  <figure>
+    <img src="assets/xinghua/photo12.jpg" alt="合掌小沙弥石像">
+    <figcaption>红墙下的小沙弥，合掌而笑。石色青灰，漆皮剥落的红墙是它唯一的背景。</figcaption>
+  </figure>
+  <figure>
+    <img src="assets/xinghua/photo13.jpg" alt="石灯笼与小沙弥">
+    <figcaption>石阶旁：石灯笼与捻珠小沙弥。墙上刻着一圈圈水纹，像投石入潭后停住的涟漪。</figcaption>
+  </figure>
+</div>
+
+<h2>地下十米，刻着会昌年间的伤口</h2>
+
+<p>寺里还有另一个时间层，藏在地表以下十到二十米处。一九九三年十二月，唐宋摩崖石刻在修建大雄宝殿时被发现。据崖壁题记考证，它们始凿于唐元和十一年，即公元八一六年；仅仅二十九年之后，会昌五年，唐武宗灭佛，造像随法难而毁。门额上「唐宋摩崖石刻造像」八个大字，是赵朴初题写的。</p>
+
+<figure class="inline">
+  <img src="assets/xinghua/photo2.jpg" alt="大佛殿院落与香炉">
+  <figcaption>大佛殿前的院落。香炉上立「文明敬香」告示牌，灰砖、朱柱与橙黄琉璃瓦之间，一位香客正倚墙歇息。古制的殿宇与当代的告示牌，在同一片石坪上共处。</figcaption>
+</figure>
+
+<p>陈列室中共有七十一龛、三十八方题记游记、一百九十五尊造像，皆为高浮雕：释迦、菩萨、天王、力士、弟子，以及佛教故事。整体布局以大石佛为最高点和中心，向两侧呈扇形展开，立面总面积约四百一十平方米。线条流畅，人物丰满，题记笔力遒劲——这是徐州现存年代最早、保存最完好的碑刻群。</p>
+
+<p>各殿内的造像则是另一重天地。千手观音端坐莲台，数十只手臂从身后层层展开，各持法器，如孔雀开屏；背景壁画云气翻涌，供案前莲花、鲜果、小塔并陈。北魏的佛在高处，唐人的龛在低处，明人的殿罩着前者，今人的保护室盛着后者——一座寺院沿着同一面崖壁，纵向堆叠了一千五百年。</p>
+
+<figure class="inline">
+  <img src="assets/xinghua/photo11.jpg" alt="千手观音造像">
+  <figcaption>殿内的千手观音（千钵文殊）像。数十臂环身展开，宝冠垂璎珞，足下莲台青绿，前立小塔与微型金佛。彩塑与壁画层层相叠，是当代匠作接续古老愿心的方式。</figcaption>
+</figure>
+
+<h2>清净法身，水月悟因</h2>
+
+<p>午后的院落安静下来。炉中余烟笔直，树影在青石地上缓慢移动。乾隆曾为兴化寺题匾「定光寂照」，并留下楹联：「清净法身云山留慧相，空灵妙性水月悟前因。」皇帝的句子对仗工稳，到底隔了一层；反倒是寺里的俗物更见真心——松枝上系的红绸、花盆沿「吉祥如意」四个字、香炉前「文明敬香」的现代告示。</p>
+
+<figure class="inline">
+  <img src="assets/xinghua/photo1.jpg" alt="禅月无声石碑">
+  <figcaption>松林下的一方石碑，金字题「禅月无声」。花盆上写着「吉祥如意」，红布条系在松枝上——古刹的秩序与世俗的愿望，在同一片树荫里相安无事。</figcaption>
+</figure>
+
+<figure class="inline">
+  <img src="assets/xinghua/photo3.jpg" alt="老槐树与祈福带">
+  <figcaption>老槐树下，栏杆上系满写着心愿的红色祈福带，红得理直气壮。佛在殿里，愿望在树上，各得其所。</figcaption>
+</figure>
+
+<p>来这里的人，大多分不清哪一砖是万历旧物、哪一层金箔贴自二〇〇八年；他们也不需要分清。三行砖能挡住雨，三丈佛能容下愿，「莫向外求」四个字能被拍照带走——这间屋子的账，就算得过去。</p>
+
+<figure class="inline">
+  <img src="assets/xinghua/photo14.jpg" alt="从云龙山俯瞰徐州城">
+  <figcaption>离寺前，在山径高处最后看一眼徐州。橙黄殿檐伏在脚下林海中，远处现代楼宇层层铺开，山与城只隔一片树。两位游人正扶栏下山，台阶尽头就是人间。</figcaption>
+</figure>
+
+<p>下山时殿宇被树冠吞去大半，只余一角橙黄的檐。一千五百年里，那尊北魏大佛一直在崖上坐着，身后的大殿烧过、塌过，又被一次次盖回来。走到山脚再回头，殿还在，佛也还在。</p>
+
+</article>
+
+<div class="colophon">
+  <b>资料来源：</b>本文寺院沿革、造像年代及尺寸，依据兴化禅寺现场碑刻说明、寺内展板及《徐州志》相关记载整理；摩崖石刻数据取自唐宋摩崖石刻造像室说明。<br>
+  <b>摄影：</b>作者本人摄于2026年9月，共采用照片十四张。<br>
+  <b>编辑附注：</b>「三砖殿覆三丈佛」为徐州旧称；今大佛殿为1606年框架，2001年按「修旧如旧」原则封闭大修，石佛于2008年重新贴金。
+</div>
+
+</div>
+
+</div>
+<script>
+function checkPwd() {
+  var pwd = document.getElementById('pwd-input').value;
+  if (pwd === '2026') {
+    sessionStorage.setItem('travel_auth', '2026');
+    document.getElementById('pwd-overlay').style.display = 'none';
+    document.querySelector('.page').style.display = 'block';
+  } else { alert('密码错误'); }
+}
+document.getElementById('pwd-input').addEventListener('keydown', function(e){ if(e.key==='Enter') checkPwd(); });
+</script>
+</body>
+</html>
